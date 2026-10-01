@@ -25,23 +25,3 @@ void rmMtx(int ** mtx, size_t rows)
     }
     delete[] mtx;
 }
-
-int main()
-{
-    int t[] = {5,5,5,5,6,6,7,7,7,7,7,8};
-    size_t lns[] = {4,2,5,1};
-    size_t n = 12;
-    size_t rows = 4;
-
-    int ** mtx = convert(t, n, lns, rows);
-    for (size_t i = 0; i < rows; ++i)
-    {
-        for (size_t j = 0; j < lns[i]; ++j)
-        {
-            std::cout << mtx[i][j] << ' ';
-        }
-        std::cout << '\n';
-    }
-    rmMtx(mtx,rows);
-    return 0;
-}
